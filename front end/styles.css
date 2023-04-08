@@ -1,0 +1,111 @@
+/* Body */
+body {
+  margin: 0;
+  
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #0077b6;
+  color: #fff;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+
+header p {
+  margin: 0;
+  font-size: 18px;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Navigation */
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px;
+}
+
+nav a:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Main content */
+main {
+  margin: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+main h2 {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+}
+
+main p {
+  font-size: 18px;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #0077b6;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 16px;
+  font-style: italic;
+}
+kbd {
+  font-weight: bold; /* Жирное начертание */
+ }
+ summary {
+  color:rgb(24, 97, 140);
+ }
+ ul {
+  font-size: 20px;
+ }
+ th {
+  font-size: 20px;
+  
+ }
+ code {
+  text-align: left;
+  
+ }

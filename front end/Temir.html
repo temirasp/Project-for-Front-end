@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <title>Temir's - Personal Page</title>
+ <link rel="stylesheet" href="styles.css">
+
+ <link rel="icon" href = "tada.png" type = "image/png" size="32x32">
+</head>
+<body>
+ <header>
+  <h1>Zhumagali Temir</h1>
+  
+   <table> 
+    <tr> 
+         <td> <figure> <img src="20230407_125912.jpg" alt="Profile Picture" height="300px" width="400px" > <figcaption> Front </figcaption> </figure>  </td> 
+         <td> <figure> <img src="Temir-side.jpg" alt="Profile Picture" height="300px" width="400px" > <figcaption> Side </figcaption> </figure>  </td>
+         
+         <th > <strong>  My skilles: </strong> </th>
+         <td> <ul> <li> C++</li> <li> Java</li> <Li> Adobe Photoshop</Li> <li> VEGAS Pro</li></ul></td>
+    </tr> 
+</table>
+
+ </header>
+ <nav>
+  <ul>
+    <li><a href="index.html">Back to the main page</a></li>
+   <li><a href="Damir.html">Yermek Damir</a></li>
+   <li><a href="Alikhan.html">Zhanabay Alikhan</a></li>
+   
+            <li><a href="Aiyaulim.html">Yerkebek Aiyaulim</a></li>
+  </ul>
+ </nav>
+ <main >
+  
+  <h2>About me</h2>
+  <p> My name is Temir Zhumagali. I have come here from Taldykorgan, but I was born in Kaskelen.</p> 
+<p>I`ve graduated from Taldykorgan`s Lomonosov school in 2022. Despite this fact I was studying in different schools because my family changed a lot of apartments. </p> 
+<p>When I was studying in the 20 lyceum I was first learning IT science. Lessons were about QB64 language. It was quite fun drawing many pictures with code so I decided to study IT more deeply. Later, in the 10-11 grade basics of HTML was studied by many students in our country including myself. Unfortunately, our studying program was quite inappropriate for learning programming so it was not as effective as it had been hoped.</p>  
+<p>After graduating I was wondering which University I want to study at. After some research I chose 4 of them.  </p>
+<p> The first was SDU. This university is located in Kaskelen so whenever my family was visiting grandpa`s home I was watching this building from afar. That's why I was especially excited about studying at SDU.  </p>
+<p>Other ones were KBTU, AITU and IITU. I had not had any background information about those Universities. I chose them because I found information about them and decided that they were the best for me.  </p>
+<p>After the competition I won a scholarship to study at Astana IT University and I have been here since that time.  </p>
+  <h2>My Hobbies and Interests</h2>
+  <ul>
+   <li>When it comes to my hobbies I do not have very much to say. Since I was a little child I loved constructing things. I made armor with paperboard boxes or swords and bows with wood. I still don`t mind doing this when I have an opportunity.  
+I also like to watch some streams, anime and playing video games such as TES V: Skyrim or Warframe.</li>
+  </ul>
+  <h2>Informertial </h2>
+  <p>In the fist trimester all of us made an informational video as an advertisement. Below you can watch video about Amazon Web Services made by me.    </p>
+  <video width="320" height="240" controls>
+     <source src="Informertial (2).mp4" type="video/mp4">
+    </video>
+    <details  >
+     
+      <summary style=" text-align: center; font-family: Arial, sans-serif;  color: #333; font-size: 25px;"> <strong>  You can also see one of my codes below</strong> </summary>
+    
+        
+    
+       
+       <pre style=" text-align: left;"> <code> 
+        public class EQ {
+          private int [][] queens=new int [8][8];
+          public EQ () {
+              for (int i=0; i<8; i++) {
+                  for (int j=0; j<8; j++) {
+                      this.queens[i][j] =-1;
+                  }
+              }
+          }
+          public EQ (int[] Queens) {
+              int j=0;
+             for (int i=0; i<8; i++) {
+                 int temp=Queens[i];
+                 this.queens[j][temp]=1;
+                 j++;
+             }
+         
+              for (int i=0; i<8; i++) {
+                  for (int v=0; v<8; v++) {
+                      if (queens[i][v] != 1) {
+                          this.queens[i][v] = -1;
+                      }
+                  }
+              }
+         
+         
+          }
+         public int get (int i) {
+              return queens[i][0];
+         }
+         public void set (int i, int j) {
+                 queens[i][j]=1 ;
+          }
+             public void printBoard() {
+                 for (int i = 0; i < 8; i++) {
+                     for (int j = 0; j < 8; j++) {
+         
+                     if (queens [i][j]==1) {
+                         System.out.print ("|X");
+                     }
+                     else  {
+                             System.out.print ("| ");
+                         }
+                     }
+                     System.out.println ("|");
+                 }
+             }
+             public boolean isSolved() {
+                 int x=10;
+                 int y=10;
+                 int a=1;
+                 for (int i = 0; i < 8; i++) {
+                     for (int j = 0; j < 8; j++) {
+                         if (i==0) {
+                             if (queens[i][j]==1) {
+                                 x=i;
+                                 y=j;
+                             }
+                         }
+                         if (queens[i][j]==1) {
+                             if (x != 10 & y != 10) {
+                                 if (getDistance(i, j, x, y) >= 1) {
+                                     a++;
+                                 }
+                             }
+                         }
+                         if (queens[i][j]==1) {
+                             x=i;
+                             y=j;
+                         }
+         
+                     }
+         
+                 }
+                
+                 if (a!=8) {
+                     return false;
+                 }
+                 else {
+                     return true;
+                 }
+         
+             }
+             public double getDistance (int x, int y, int X, int Y) {
+                 double a =((X-x)*(X-x)) + ((Y-y)*(Y-y));
+                 double b= Math.sqrt (a);
+                 return b;
+             }
+         }
+         
+         
+         class aaaa {
+             public static void main(String[] args) {
+                 EQ board1 = new EQ();
+         
+                 board1.set(0, 2);
+                 board1.set(1, 4);
+                 board1.set(2, 7);
+                 board1.set(3, 1);
+                 board1.set(4, 0);
+                 board1.set(5, 3);
+                 board1.set(6, 6);
+                 board1.set(7, 5);
+                 System.out.println("Is board 1 a correct eight queen placement? "
+                         + board1.isSolved());
+                 EQ board2 = new EQ(new int[]{0, 4, 7, 5, 2, 6, 1, 3});
+                 if (board2.isSolved()==true) {
+                     System.out.println("Eight queens are placed correctly "
+                             + "in board 2");
+                     board2.printBoard();
+                     System.out.println ("gggggggggggggggggggg");
+         
+                 }
+                 else {
+                     board2.printBoard();
+                 }
+             }
+         }
+         
+       </code> </pre>
+        
+        
+       
+    </details>
+  
+  
+  <details>
+    <summary>Contact information</summary>
+    <address>
+      Written by: Zhumagali Temir<br> 
+      Email : <a href="221918@astanait.edu.kz">221918@astanait.edu.kz</a> <br>
+      
+      
+      </address>
+  </details>
+  
+
+  
+    
+  
+ </main>
+ <footer>
+  <p>&copy; Team of Temir, Alikhan, Damir and Aiyaulim </p>
+ </footer>
+ </body>
+</html>
